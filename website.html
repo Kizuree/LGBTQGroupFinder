@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+   <title>LGBTQ+ Groupfinder</title>
+
+   <!--Go to https://console.firebase.google.com-->
+   <!--Sign in and add a project "fireMessage"-->
+   <!--PASTE SNIPPET HERE-->
+   
+<script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
+<script>
+ // Initialize Firebase
+ var config = {
+   apiKey: "AIzaSyCW4QnYxFjLJYMwORiytfqtjHZIsN9bUGc",
+   authDomain: "firemesssage-cfe82.firebaseapp.com",
+   databaseURL: "https://firemesssage-cfe82.firebaseio.com",
+   projectId: "firemesssage-cfe82",
+   storageBucket: "",
+   messagingSenderId: "16299113303"
+ };
+ firebase.initializeApp(config);
+</script>
+
+
+
+   <!--custom files-->
+   <script src="styles/js/website.js" defer></script>
+   <link rel="stylesheet" href="styles/css/website.css">
+   <link rel="stylesheet" href="<link href="https://fonts.googleapis.com/css?family=Ranga" rel="stylesheet">">
+   <link href="https://fonts.googleapis.com/css?family=Itim" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+</head>
+<body>
+
+   <!--Add your name-->
+   <h1>Welcome to LGBTQ+ Groupfinder</h1>
+   <h1 id = "displayname">displayname</h1>
+   <h1 id = "location">location</h1>
+   <h1 id = "contact">contactinfo</h1>
+   <h1 id = "smalldiscription">Small Discription</h1>
+   <h2>Directions: Type in the live chat by typing in your group name and a message that follows. Click on someones groupname to view their account. </h2>
+   <h3>Live Chat</h3>
+
+   <!--This div will be populated with messages-->
+   <div id="allMessages">
+
+   </div>
+   
+   <!--For user to input messages-->
+   <div class="userContainer">
+       <form>
+           <div class="inputContainer">
+               <div class="singleInput">
+                   <label for="username">Groupname:</label>
+                   <input id="username" type="text">
+               </div>
+               <div class="singleInput">
+                   <label for="message">Message:</label>
+                   <input id="message" type="text">
+               </div>
+           </div>
+           <button id="submitButton">Submit</button>
+       </form>
+   </div>
+</body>
+</html>

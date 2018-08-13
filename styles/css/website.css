@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css?family=Fredericka+the+Great|Gudea:700');
+/* GOOGLE FONTS */
+
+/* font-family: 'Fredericka the Great', cursive; */
+
+/* font-family: 'Gudea', sans-serif; */
+
+/* COLOR PALETTE */
+
+/* https://coolors.co/36151e-839791-593f62-e3b23c-edebd7 */
+
+:root {
+    --primaryDark: #36151E;
+    --primaryLight: #EDEBD7;
+    --accent: #E3B23C;
+    --alternate: #593F62;
+    --addedPadding: 10px;
+}
+
+html,
+body,
+h1,
+p {
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    background-color: rgb(123, 145, 11);
+    /* background: url(https://3.imimg.com/data3/YK/MF/MY-9146698/background-colors-250x250.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; */
+}
+
+h1,
+label,
+#submitButton {
+    font-family: 'Fredericka the Great', cursive;
+    font-weight: bold;
+}
+
+input,
+#allMessages>p {
+    font-family: 'Gudea', sans-serif;
+}
+
+h1 {
+    font-size: 45px;
+    color: rgb(98, 219, 252);
+    text-align: center;
+    font-family: 'Ranga', cursive;
+}
+
+#allMessages {
+    flex: 1;
+    margin-top: 15px;
+    width: calc(60% + var(--addedPadding)*2);
+    padding: var(--addedPadding);
+    border: 2px solid rgb(0, 0, 0);
+    background-color: rgb(237, 40, 40);
+    color: black;
+    overflow-y: scroll;
+    overflow-wrap: break-word;
+    box-sizing: border-box;
+    display: grid;
+    grid-auto-rows: min-content;
+    grid-gap: 5px;
+}
+
+#allMessages>p {
+    text-indent: -2em;
+    margin-left: 2em;
+}
+
+.userContainer {
+    margin: 20px 0 40px 0;
+    width: 60%;
+    border: 2px solid var(--accent);
+    background-color: purple;
+}
+
+label {
+    font-size: 30px;
+    color: var(--primaryDark);
+    font-family: 'Anton', sans-serif;
+}
+
+input {
+    font-size: 1.3em;
+    background: none;
+    border: unset;
+    border-bottom: var(--alternate) 2px solid;
+    caret-color: var(--accent);
+    color: black;
+}
+
+input:focus {
+    outline: none;
+}
+
+.userContainer {
+    padding: var(--addedPadding);
+}
+
+form,
+.inputContainer,
+.singleInput {
+    display: grid;
+    grid-gap: var(--addedPadding);
+}
+
+form {
+    grid-template: auto/1fr auto;
+}
+
+.inputContainer {
+    grid-template: auto auto/auto;
+}
+
+.singleInput {
+    grid-template: auto/auto 1fr;
+}
+
+#submitButton {
+    color: var(--primaryDark);
+    background-color: var(--accent);
+    font-size: 1.3em;
+    transition: color 300ms ease-in, background-color 300ms ease-in;
+    cursor: pointer;
+}
+
+#submitButton:hover {
+    background-color: var(--primaryDark);
+    color: var(--accent);
+}
+
+#submitButton:focus {
+    outline-style: none;
+    outline-width: 2px;
+    outline-color: var(--primarydark);
+}
+@media screen and (max-width: 500px){
+    #mian{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+h2{
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    font-size: 40px;
+    color: black;
+    font-family: 'Itim', cursive;
+}
+h3{
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    font-size: 40px;
+    color: black;
+    font-family: 'Itim', cursive;
+    padding: 20px;
+}
