@@ -1,7 +1,6 @@
-const usernameElement = document.getElementById("username");
-const messageElement = document.getElementById("message");
-const button = document.getElementById("submitButton");
-button.addEventListener("click",updateDB);
+
+const websiteSubmitButton = document.getElementById("submitButton");
+websiteSubmitButton.addEventListener("click",updateDB);
 
 //Set database object here
 const database = firebase.database();
@@ -14,6 +13,8 @@ const currentUser = firebase.auth().currentUser;
 */
 function updateDB(event){
    event.preventDefault();
+   const usernameElement = document.getElementById("username");
+    const messageElement = document.getElementById("message");
 //    const username        = usernameElement.value;
     // const username = currentUser.displayName;
    const message = messageElement.value;
