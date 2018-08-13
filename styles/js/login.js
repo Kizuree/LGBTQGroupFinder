@@ -16,8 +16,10 @@ function login(event){
     // Sign in user with another account
     firebase.auth().signInWithEmailAndPassword(email, password).then(function() {
         //success, reidrect to main site
+        window.location.href = "file:///C:/Users/ASC%20Student/Documents/groupFinder/website.html"
     }).catch(function(error) {
         // Handle Errors here.
+        alert("Incorrect Email or Password. Please try again.")
         var errorCode = error.code;
         var errorMessage = error.message;
         // ...
