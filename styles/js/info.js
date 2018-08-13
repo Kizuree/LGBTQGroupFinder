@@ -1,7 +1,7 @@
 const groupname = document.getElementById("groupname");
-const location = document.getElementById("location");
+const lOcation = document.getElementById("location");
 const contact = document.getElementById("contact");
-const discription = document.getElementById("discritption");
+const description = document.getElementById("descritption");
 
 const submitbutton = document.getElementById("submitbutton");
 submitbutton.addEventListener("click",updateDB);
@@ -13,12 +13,12 @@ function updateDB(event){
 
     const currentUser = firebase.auth().currentUser;
     const GroupName = groupname.value;
-    const L = location.value;
+    const L = lOcation.value;
     const Contact = contact.value;
     const Description = description.value;
 
     groupname.value = "";
-    location.value = "";
+    lOcation.value = "";
     contact.value = "";
     description.value = "";
 
