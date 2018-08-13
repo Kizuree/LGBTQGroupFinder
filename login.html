@@ -8,6 +8,7 @@
     <script src="styles/js/login.js" defer></script>
     <link rel="stylesheet" href="styles/css/login.css">
     <script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
 <script>
     // Initialize Firebase
     var config = {
@@ -24,25 +25,27 @@
 </head>
 <body>
     <div>
-        <h1>login</h1>
+        <h1>Login</h1>
+        <p>Directions: Type in your email and password, if you do not have an account create one here.</p>
     </div>
-
-    <div>
+<div id = "all">
+<div id = "content">
+    <div id = "userpass">
         <label for="">Email</label>
         <input type="text" name="" id="emailLogin">
     </div>
    
 
-    <div>
+    <div id = "userpass">
         <label for="password">Password: </label>
         <input id="passwordLogin" type="text">
         
    </div>
-
-   <div>
-    <button id="pushedButton">push</button>
 </div>
-
+   <div>
+    <button id="pushedButton">Login</button>
+</div>
+</div>
 
 </body>
 </html>
