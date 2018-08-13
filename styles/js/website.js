@@ -4,7 +4,9 @@ const button = document.getElementById("submitButton");
 button.addEventListener("click",updateDB);
 
 //Set database object here
-const database = firebase.database().ref();
+const database = firebase.database();
+
+const currentUser = firebase.auth().currentUser;
 
 
 /**
@@ -12,21 +14,24 @@ const database = firebase.database().ref();
 */
 function updateDB(event){
    event.preventDefault();
-   const username        = usernameElement.value;
-   const message         = messageElement.value;
+//    const username        = usernameElement.value;
+    const username = currentUser.displayName;
+   const message = messageElement.value;
 
-   usernameElement.value = "";
+//    usernameElement.value = "";
    messageElement.value  = "";
 
    console.log(username + " : " + message);
 
    //Update database here
-const value = {
-   NAME: username,
-   MESSAGE: message
+    const value = {
+        NAME: username,
+        MESSAGE: message
+    }
+
+    database.ref('messages').push(value);
 }
-database.push(value);
-}
+
 function updateUI(data){
    const allMessagesDiv = document.getElementById('allMessages');
    const messageDiv = document.createElement('p');
@@ -34,7 +39,7 @@ function updateUI(data){
    allMessagesDiv.appendChild(messageDiv);
 }
 // Set database "child_added" event listener here
-database.on("child_added", function(dataRef){
+database.ref('messages').on("child_added", function(dataRef){
    const data = dataRef.val();
    updateUI(data);
 });

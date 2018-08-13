@@ -1,5 +1,5 @@
 const groupname = document.getElementById("groupname");
-const lOcation = document.getElementById("location");
+const location = document.getElementById("location");
 const contact = document.getElementById("contact");
 const discription = document.getElementById("discritption");
 
@@ -8,33 +8,32 @@ submitbutton.addEventListener("click",updateDB);
 
 const database = firebase.database();
 
-
 function updateDB(event){
+    event.preventDefault();
 
-   event.preventDefault();
-const GroupName = groupname.value;
-const L = lOcation.value;
-const Contact = contact.value;
-const Description = description.value;
+    const currentUser = firebase.auth().currentUser;
+    const GroupName = groupname.value;
+    const L = location.value;
+    const Contact = contact.value;
+    const Description = description.value;
 
+    groupname.value = "";
+    location.value = "";
+    contact.value = "";
+    description.value = "";
 
-   groupname.value = "";
-   lOcation.value = "";
-   contact.value = "";
-   description.value = "";
+    //Update database here
+    const value = {
+        GROUPNAME: GroupName,
+        LOCATION: L,
+        CONTACT: Contact,
+        DeSCRIPTION: Description,
+    }
 
+    firebase.auth().currentUser.displayName = GroupName;
+    database.ref('users/' + currentUser.uid).set(value);
 
-
-
-//Update database here
-const value = {
-   GROUPNAME: GroupName,
-   LOCATION: L,
-   CONTACT: Contact,
-   DeSCRIPTION: Description,
-
-}
-database.ref( GroupName + "," + L + "," + Contact + "," + Description).set(value);
+    // then redirect to website.html
 
 
 }
