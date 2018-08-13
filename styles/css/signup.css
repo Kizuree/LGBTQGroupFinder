@@ -1,0 +1,41 @@
+#acc{
+    text-align: center;
+}
+
+.userPass{
+    
+    text-align: center;
+    padding: 15px;
+
+}
+
+body{
+    
+    justify-content: center;
+    background-color: darkslategray;
+
+}
+
+#buttonPush{
+    margin-left: 680px;
+    
+    
+}
+
+#loginPage{
+ 
+    color: aliceblue;
+}
+#loginPage2{
+    text-align: center;
+    padding-left: 70px;
+    margin-top: 10px;
+}
+
+
+/*@media screen and (min-width: 320px) {
+   #buttonPush{
+       margin-left: 330px;
+   }
+}*/
+

@@ -1,0 +1,26 @@
+body{
+    display: flex;
+    justify-content: center;
+ }
+ .inputContainer{
+    padding: 15px;
+    font-family: 'Indie Flower', cursive;
+    font-size: 30px;
+ }
+ button{
+    background-color: rgb(131, 255, 0);
+    border: none;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 48px;
+ }
+ #title{
+    font-family: 'Indie Flower', cursive;
+    font-size: 40px;
+    color: rgb(255, 227, 20);
+ }
+ input{
+    width: 500px;
+ }
