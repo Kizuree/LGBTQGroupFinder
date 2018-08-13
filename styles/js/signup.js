@@ -1,13 +1,13 @@
-const  emailElement= document.getElementById("email");
-const passwordElement = document.getElementById("password");
-button = document.getElementById("enterButton")
+const enterButton = document.getElementById("enterButton")
 
-button.addEventListener("click", signUp)
+enterButton.addEventListener("click", signUp)
 
 const database = firebase.database();
 
 function signUp(event){
     event.preventDefault();
+    const  emailElement= document.getElementById("email");
+    const passwordElement = document.getElementById("password"); 
     const email = emailElement.value;
     const password = passwordElement.value;
 
@@ -16,6 +16,8 @@ function signUp(event){
 
     firebase.auth().createUserWithEmailAndPassword(email, password).then(function() {
       // redirect to info.js
+      window.location.href = "file:///C:/Users/ASC%20Student/Documents/groupFinder/info.html"
+
     }).catch(function(error) {
 
       // Handle Errors here.
@@ -32,3 +34,6 @@ function signUp(event){
       console.log(error);
     });
 }
+
+
+

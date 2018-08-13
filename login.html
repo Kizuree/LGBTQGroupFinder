@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login</title>
+    <script src="styles/js/login.js" defer></script>
+    <link rel="stylesheet" href="styles/css/login.css">
+    <script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
+<script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyAJyTPaR2Bv8eMGG_e0L-swI2yfk-aWRuA",
+      authDomain: "userpass-2776a.firebaseapp.com",
+      databaseURL: "https://userpass-2776a.firebaseio.com",
+      projectId: "userpass-2776a",
+      storageBucket: "userpass-2776a.appspot.com",
+      messagingSenderId: "210542379195"
+    };
+    firebase.initializeApp(config);
+  </script>
+    
+</head>
+<body>
+    <div>
+        <h1>login</h1>
+    </div>
+
+    <div>
+        <label for="">Email</label>
+        <input type="text" name="" id="emailLogin">
+    </div>
+   
+
+    <div>
+        <label for="password">Password: </label>
+        <input id="passwordLogin" type="text">
+        
+   </div>
+
+   <div>
+    <button id="pushedButton">push</button>
+</div>
+
+
+</body>
+</html>
