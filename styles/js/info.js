@@ -31,8 +31,8 @@ function updateDB(event){
         DeSCRIPTION: Description,
     }
 
-    firebase.auth().currentUser.displayName = GroupName;
     database.ref('users/' + currentUser.uid).set(value);
+    
     // then redirect to website.html
 
 
