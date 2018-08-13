@@ -32,8 +32,9 @@ function updateDB(event){
     }
 
     database.ref('users/' + currentUser.uid).set(value);
-    window.location.href = "file:///C:/Users/ASC%20Student/Documents/LGBTQGroupFinder/login.html"
     // then redirect to website.html
+    window.location.href = "file:///C:/Users/ASC%20Student/Documents/LGBTQGroupFinder/login.html"
+    
 
 
 }
