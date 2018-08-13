@@ -1,7 +1,11 @@
 body{
     display: block;
     justify-content: center;
-    
+    background: url(https://marketplace.canva.com/MAC3UveC7lI/1/screen/canva-gradient%2C-professional%2C-background%2C-website-MAC3UveC7lI.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 #userpass{
     padding: 30px;
@@ -9,18 +13,23 @@ body{
  
 }
 input{
-    width: 500px;
+    width: 300px;
 }
 button{
     padding: 5px;
     font-size: 16px;
 }
-h1{
+h2{
     font-size: 64px;
     font-family: 'Permanent Marker', cursive;
-    color: rgb(91, 137, 0);
+    color: rgb(28, 66, 1);
 }
 p{
     font-size: 26px;
     font-weight: bold;
+}
+h1{
+    font-size: 86px;
+    color: rgb(22, 26, 61);
+    text-decoration: underline;
 }
