@@ -15,17 +15,16 @@ const currentUser = firebase.auth().currentUser;
 function updateDB(event){
    event.preventDefault();
 //    const username        = usernameElement.value;
-    const username = currentUser.displayName;
+    // const username = currentUser.displayName;
    const message = messageElement.value;
 
 //    usernameElement.value = "";
    messageElement.value  = "";
 
-   console.log(username + " : " + message);
 
    //Update database here
     const value = {
-        NAME: username,
+        // NAME: username,
         MESSAGE: message
     }
 
