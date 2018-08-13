@@ -28,13 +28,11 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 100vh;
-    background-color: rgb(123, 145, 11);
-    /* background: url(https://3.imimg.com/data3/YK/MF/MY-9146698/background-colors-250x250.jpg) no-repeat center center fixed; 
+    background: url(http://www.digitalrevolutions.biz/wp-content/uploads/2009/07/abstract_circles_background_1.jpg) no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-size: cover; */
+    background-size: cover;
 }
 
 h1,
@@ -51,7 +49,7 @@ input,
 
 h1 {
     font-size: 45px;
-    color: rgb(98, 219, 252);
+    color: rgb(0, 49, 130);
     text-align: center;
     font-family: 'Ranga', cursive;
 }
@@ -60,6 +58,7 @@ h1 {
     flex: 1;
     margin-top: 15px;
     width: calc(60% + var(--addedPadding)*2);
+    height: 500px;
     padding: var(--addedPadding);
     border: 2px solid rgb(0, 0, 0);
     background-color: rgb(237, 40, 40);
@@ -167,4 +166,9 @@ h3{
     color: black;
     font-family: 'Itim', cursive;
     padding: 20px;
+}
+#Welcome{
+    text-decoration: underline;
+    font-size: 64px;
+    color: rgb(22, 26, 61);
 }

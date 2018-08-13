@@ -1,6 +1,10 @@
 const usernameElement = document.getElementById("username");
 const messageElement = document.getElementById("message");
 const button = document.getElementById("submitButton");
+const displayname = document.getElementById("displayname");
+const locatioN = document.getElementById("location");
+const contact = document.getElementById("contact");
+const smalldiscription = document.getElementById("smalldiscription");
 button.addEventListener("click",updateDB);
 
 //Set database object here
@@ -42,5 +46,8 @@ database.ref('messages').on("child_added", function(dataRef){
    const data = dataRef.val();
    updateUI(data);
 });
-
+// displayname.innerText = currentUser;
+// locatioN.innerText = currentUser;
+// contact.innerText = currentUser;
+// smalldiscription.innerText = currentUser;
 
