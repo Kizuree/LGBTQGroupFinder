@@ -5,13 +5,15 @@ const usernameElement = document.getElementById("username");
 const messageElement = document.getElementById("message");
 const websiteSubmitButton = document.getElementById("submitButton");
 websiteSubmitButton.addEventListener("click",updateDB);
-
+const logOutButton = document.getElementById("logOutButton");
+logOutButton.addEventListener("click", logOut)
 //Set database object here
 const database = firebase.database();
 
 /**
 * Updates the database with the username and message.
 */
+
 function updateDB(event){
    event.preventDefault();
    const message = messageElement.value;
@@ -59,3 +61,15 @@ database.ref('messages').on("child_added", function(dataRef){
 // contact.innerText = currentUser;
 // smalldiscription.innerText = currentUser;
 
+
+function logOut(){
+    firebase.auth().signOut().then(function() {
+      
+        window.location.href = "file:///C:/Users/ASC%20Student/Documents/LGBTQGroupFinder/login.html"
+        // Sign-out successful.
+      }).catch(function(error) {
+        // An error happened.
+      });
+
+
+}
