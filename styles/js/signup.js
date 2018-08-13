@@ -16,7 +16,7 @@ function signUp(event){
 
     firebase.auth().createUserWithEmailAndPassword(email, password).then(function() {
       // redirect to info.js
-      window.location.href = "file:///C:/Users/ASC%20Student/Documents/groupFinder/info.html"
+      window.location.href = "file:///C:/Users/ASC%20Student/Documents/LGBTQGroupFinder/info.html"
 
     }).catch(function(error) {
 
