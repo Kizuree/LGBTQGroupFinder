@@ -32,3 +32,7 @@ user {
 Aldenis: Working on "create account page, login page", "styling"
 James: "Login Page", "Live chat API", "styling"
 
+GSA is a club that meets on wednesdays to discuss problems in the LGBTQ+ community. We are looking to hold and event at our school on thursday August 24th
+Email: jleidy167@gmail.com, Phone: 913445757
+Manhattan, New York
+MCSM_GSA

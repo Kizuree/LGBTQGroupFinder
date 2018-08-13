@@ -1,4 +1,8 @@
-
+const locatioN = document.getElementById("location");
+const contact = document.getElementById("contact");
+const smalldiscription = document.getElementById("smalldiscription");
+const usernameElement = document.getElementById("username");
+const messageElement = document.getElementById("message");
 const websiteSubmitButton = document.getElementById("submitButton");
 websiteSubmitButton.addEventListener("click",updateDB);
 
@@ -13,11 +17,6 @@ const currentUser = firebase.auth().currentUser;
 */
 function updateDB(event){
    event.preventDefault();
-   const locatioN = document.getElementById("location");
-const contact = document.getElementById("contact");
-const smalldiscription = document.getElementById("smalldiscription");
-   const usernameElement = document.getElementById("username");
-    const messageElement = document.getElementById("message");
 //    const username        = usernameElement.value;
     // const username = currentUser.displayName;
    const message = messageElement.value;
