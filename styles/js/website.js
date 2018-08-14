@@ -29,7 +29,7 @@ firebase.auth().onAuthStateChanged(function(user) {
         contact.innerText = globalContact;
         smalldiscription.innerText = globaldiscription;
         });
-
+console.log("xd")
 
     } else {
       // No user is signed in.
