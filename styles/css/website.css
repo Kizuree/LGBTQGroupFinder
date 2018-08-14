@@ -181,3 +181,21 @@ h3{
     font-size: 20px;
     background-color: green;
 }
+
+#peepz{
+    text-align: center;
+    font-size: 40px;
+}
+
+
+#pfp{
+    display: inline;
+    font-size: 30px;
+}
+
+.peeps{
+    display: inline;
+    border: 7px solid black;
+   padding-left: 30px;
+    
+}

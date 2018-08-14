@@ -1,4 +1,3 @@
-
 const DisplayName = document.getElementById("groupname")
 const submitbutton = document.getElementById("submitbutton");
 submitbutton.addEventListener("click",updateDB);

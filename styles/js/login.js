@@ -1,4 +1,3 @@
-
 const database = firebase.database();
 const pushedButton = document.getElementById("pushedButton")
 pushedButton.addEventListener("click", login);

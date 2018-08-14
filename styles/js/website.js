@@ -30,7 +30,7 @@ firebase.auth().onAuthStateChanged(function(user) {
         smalldiscription.innerText = globaldiscription;
         });
 
-console.log ("xd")
+
     } else {
       // No user is signed in.
       console.log("no user")
@@ -39,7 +39,7 @@ console.log ("xd")
    
 
 function editProf(){
-    window.location.href ="file:///C:/Users/ASC%20Student/Documents/LGBTQGroupFinder/info.html"
+    window.location.href ="/info.html"
 }
 /**
 * Updates the database with the username and message.

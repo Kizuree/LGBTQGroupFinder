@@ -35,6 +35,3 @@ function signUp(event){
       console.log(error);
     });
 }
-
-
-
