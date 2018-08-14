@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-const DisplayName = document.getElementById("groupname")
-=======
 
 
->>>>>>> 8916135d21b9dc44eb0e49461d43c2c622ab395b
 const submitbutton = document.getElementById("submitbutton");
 submitbutton.addEventListener("click",updateDB);
 // const database = firebase.database();
