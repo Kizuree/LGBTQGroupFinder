@@ -1,19 +1,45 @@
+const nameDisplay = document.getElementById("displayname");
 const locatioN = document.getElementById("location");
 const contact = document.getElementById("contact");
 const smalldiscription = document.getElementById("smalldiscription");
 const usernameElement = document.getElementById("username");
 const messageElement = document.getElementById("message");
-const websiteSubmitButton = document.getElementById("submitButton");
+const websiteSubmitButton = document.getElementById("submitbutton");
 websiteSubmitButton.addEventListener("click",updateDB);
 const logOutButton = document.getElementById("logOutButton");
 logOutButton.addEventListener("click", logOut)
 const editProfileButton = document.getElementById("editProfileButton")
 editProfileButton.addEventListener("click", editProf )
+let globalUserName = "";
 //Set database object here
 const database = firebase.database();
 
+//if login in or logged out, get user
+firebase.auth().onAuthStateChanged(function(user) {
+    if (user) {
+    //query 'users' database using current user 'uid'
+      database.ref('users/' + user.uid).once('value').then(function(userRef) {
+        console.log(userRef.val().GROUPNAME)
+        globalUserName = userRef.val().GROUPNAME;
+        globalLocation = userRef.val().LOCATION;
+        globalContact = userRef.val().CONTACT;
+        globaldiscription = userRef.val().DeSCRIPTION;
+        nameDisplay.innerText = globalUserName;
+        locatioN.innerText = globalLocation;
+        contact.innerText = globalContact;
+        smalldiscription.innerText = globaldiscription;
+        });
+
+
+    } else {
+      // No user is signed in.
+      console.log("no user")
+    }
+  });
+   
+
 function editProf(){
-    window.location.href ="file:///C:/Users/ASC%20Student/Documents/LGBTQGroupFinder/info.html"
+    window.location.href ="/info.html"
 }
 /**
 * Updates the database with the username and message.
