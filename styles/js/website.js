@@ -12,6 +12,7 @@ editProfileButton.addEventListener("click", editProf )
 //Set database object here
 const database = firebase.database();
 
+
 function editProf(){
     window.location.href ="file:///C:/Users/ASC%20Student/Documents/LGBTQGroupFinder/info.html"
 }
