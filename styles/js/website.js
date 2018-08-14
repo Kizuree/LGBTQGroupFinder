@@ -39,7 +39,7 @@ console.log ("xd")
    
 
 function editProf(){
-    window.location.href ="/info.html"
+    window.location.href ="file:///C:/Users/ASC%20Student/Documents/LGBTQGroupFinder/info.html"
 }
 /**
 * Updates the database with the username and message.
