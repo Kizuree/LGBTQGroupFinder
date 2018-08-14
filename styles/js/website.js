@@ -4,7 +4,7 @@ const contact = document.getElementById("contact");
 const smalldiscription = document.getElementById("smalldiscription");
 const usernameElement = document.getElementById("username");
 const messageElement = document.getElementById("message");
-const websiteSubmitButton = document.getElementById("submitbutton");
+const websiteSubmitButton = document.getElementById("submitButton");
 websiteSubmitButton.addEventListener("click",updateDB);
 const logOutButton = document.getElementById("logOutButton");
 logOutButton.addEventListener("click", logOut)
