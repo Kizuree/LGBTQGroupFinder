@@ -24,7 +24,7 @@ function updateDB(event){
 
    // read user from db
 
-   database.ref('users/' + currentUser.uid).once('value').then(function(userRef) {
+   firebase.database().ref('users/' + currentUser.uid).once('value').then(function(userRef) {
     const user = userRef.val();
     const name = user.GROUPNAME;
 
