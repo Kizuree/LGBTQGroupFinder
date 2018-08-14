@@ -9,7 +9,7 @@ body{
 }
 #userpass{
     padding: 30px;
-    font-size: 36px;
+    font-size: 64px;
  
 }
 input{
@@ -17,7 +17,7 @@ input{
 }
 button{
     padding: 5px;
-    font-size: 16px;
+    font-size: 40px;
     margin-left: 150px;
 }
 h2{

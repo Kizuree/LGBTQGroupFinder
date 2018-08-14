@@ -1,4 +1,9 @@
 body{
+    background: url(https://www.noupe.com/wp-content/uploads/2009/10/baroque-pattern.jpg)no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
     display: flex;
     justify-content: center;
  }
@@ -6,6 +11,7 @@ body{
     padding: 15px;
     font-family: 'Indie Flower', cursive;
     font-size: 30px;
+    color: gold;
  }
  button{
     background-color: rgb(131, 255, 0);
