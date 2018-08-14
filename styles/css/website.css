@@ -63,7 +63,7 @@ h1 {
     border: 2px solid rgb(0, 0, 0);
     background-color: rgb(237, 40, 40);
     color: black;
-    overflow-y: scroll;
+    overflow: auto;
     overflow-wrap: break-word;
     box-sizing: border-box;
     display: grid;
@@ -171,4 +171,13 @@ h3{
     text-decoration: underline;
     font-size: 64px;
     color: rgb(22, 26, 61);
+}
+#editProfileButton{
+    font-size: 20px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+#logOutButton{
+    font-size: 20px;
+    background-color: green;
 }
