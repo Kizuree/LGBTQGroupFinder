@@ -10,34 +10,6 @@ const logOutButton = document.getElementById("logOutButton");
 logOutButton.addEventListener("click", logOut)
 const editProfileButton = document.getElementById("editProfileButton")
 editProfileButton.addEventListener("click", editProf )
-let globalUserName = "";
-//Set database object here
-const database = firebase.database();
-
-//if login in or logged out, get user
-firebase.auth().onAuthStateChanged(function(user) {
-    if (user) {
-    //query 'users' database using current user 'uid'
-      database.ref('users/' + user.uid).once('value').then(function(userRef) {
-        console.log(userRef.val().GROUPNAME)
-        globalUserName = userRef.val().GROUPNAME;
-        globalLocation = userRef.val().LOCATION;
-        globalContact = userRef.val().CONTACT;
-        globaldiscription = userRef.val().DeSCRIPTION;
-        nameDisplay.innerText = globalUserName;
-        locatioN.innerText = globalLocation;
-        contact.innerText = globalContact;
-        smalldiscription.innerText = globaldiscription;
-        });
-
-
-    } else {
-      // No user is signed in.
-      console.log("no user")
-    }
-  });
-   
-
 function editProf(){
     window.location.href ="/info.html"
 }
@@ -62,7 +34,7 @@ function updateDB(event){
         MESSAGE: message
     }
 
-    database.ref('messages').push(value);
+    firebase.database().ref('messages').push(value);
    });
    
 //    const username        = usernameElement.value;
@@ -83,7 +55,7 @@ function updateUI(data){
     allMessagesDiv.appendChild(messageDiv);
 }
 // Set database "child_added" event listener here
-database.ref('messages').on("child_added", function(dataRef){
+firebase.database().ref('messages').on("child_added", function(dataRef){
    const data = dataRef.val();
    updateUI(data);
 });
