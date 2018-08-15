@@ -196,15 +196,15 @@ h3{
     font-size: 64px;
     color: rgb(22, 26, 61);
 }
-#editProfileButton{
+/* #editProfileButton{
     font-size: 20px;
     margin-bottom: 15px;
     font-weight: bold;
-}
-#logOutButton{
+} */
+/* #logOutButton{
     font-size: 20px;
     background-color: green;
-}
+} */
 
 #peepz{
     text-align: center;
@@ -215,10 +215,23 @@ h3{
 
 
 #pfp{
+    color: rgb(61, 2, 41);
     display: inline;
     font-size: 65px;
     font-family: 'Orbitron', sans-serif;
 
+}
+#pfp1{
+    color: rgb(61, 2, 41);
+    display: inline;
+    font-size: 65px;
+    font-family: 'Orbitron', sans-serif;
+}
+#pfp2{
+    color: rgb(61, 2, 41);
+    display: inline;
+    font-size: 65px;
+    font-family: 'Orbitron', sans-serif;
 }
 
 .peeps{
@@ -230,6 +243,24 @@ h3{
 }
 
 #datway{
+    border: 7px solid black;
+}
+.peeps1{
+    display: inline;
+    border: 7px solid black;
+   padding-left: 65px;
+   padding-top: 30px;
+}
+.peeps2{
+    display: inline;
+    border: 7px solid black;
+   padding-left: 65px;
+   padding-top: 30px;
+}
+#datway1{
+    border: 7px solid black;
+}
+#datway2{
     border: 7px solid black;
 }
 
