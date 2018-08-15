@@ -75,3 +75,10 @@
  #showPassword{
      text-align: center;
  }
+
+
+ @media only screen and (max-width: 360px) {
+    #mainTitle {
+    font-size: 30px;
+    }
+}
