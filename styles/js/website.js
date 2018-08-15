@@ -1,4 +1,4 @@
-const nameDisplay = document.getElementById("displayname");
+
 const locatioN = document.getElementById("location");
 const contact = document.getElementById("contact");
 const smalldiscription = document.getElementById("smalldiscription");
@@ -11,6 +11,16 @@ logOutButton.addEventListener("click", logOut)
 const editProfileButton = document.getElementById("editProfileButton")
 editProfileButton.addEventListener("click", editProf )
 
+
+firebase.auth().onAuthStateChanged(function(user) {
+    if (user) {
+        displayCurrentUser();
+    } else {
+      // No user is signed in.
+      console.log('user not signed in')
+    }
+});
+  
 
 
 
@@ -32,6 +42,7 @@ function updateDB(event){
    firebase.database().ref('users/' + currentUser.uid).once('value').then(function(userRef) {
     const user = userRef.val();
     const name = user.GROUPNAME;
+    
 
     //Update database here
     const value = {
@@ -42,8 +53,8 @@ function updateDB(event){
     firebase.database().ref('messages').push(value);
    });
    
-//    const username        = usernameElement.value;
-    // const username = currentUser.displayName;
+    //const username        = usernameElement.value;
+     //const username = currentUser.displayName;
    
 
 //    usernameElement.value = "";
@@ -64,8 +75,19 @@ firebase.database().ref('messages').on("child_added", function(dataRef){
    const data = dataRef.val();
    updateUI(data);
 });
-// displayname.innerText = currentUser;
-// locatioN.innerText = currentUser;
+
+
+function displayCurrentUser() {
+    const currentUser = firebase.auth().currentUser;
+    const nameDisplay = document.getElementById("displayname");
+
+    firebase.database().ref('users/' +currentUser.uid + '/GROUPNAME').once("value").then(function(usernameSnapshot){
+        const currentUsername = usernameSnapshot.val();
+        nameDisplay.innerText = currentUsername;
+    });
+}
+   
+ //locatioN.innerText =currentUser;
 // contact.innerText = currentUser;
 // smalldiscription.innerText = currentUser;
 
