@@ -1,21 +1,45 @@
 
-const locatioN = document.getElementById("location");
-const contact = document.getElementById("contact");
-const smalldiscription = document.getElementById("smalldiscription");
-const usernameElement = document.getElementById("username");
+
+
 const messageElement = document.getElementById("message");
+
+const searchButton = document.getElementById("searchSubmit");
+searchButton.addEventListener('click', searchUser);
+
 const websiteSubmitButton = document.getElementById("submitButton");
 websiteSubmitButton.addEventListener("click",updateDB);
+
 const logOutButton = document.getElementById("logOutButton");
-logOutButton.addEventListener("click", logOut)
+logOutButton.addEventListener("click", logOut);
+
 const editProfileButton = document.getElementById("editProfileButton")
-editProfileButton.addEventListener("click", editProf )
+editProfileButton.addEventListener("click", editProf );
+
 const elem = document.getElementById('allMessages');
 
+function searchUser(evt) {
+    evt.preventDefault();
 
-firebase.auth().onAuthStateChanged(function(user) {
-    if (user) {
-        displayCurrentUser();
+    const searchInput = document.getElementById("search");
+    const username = searchInput.value.trim();
+
+    firebase.database().ref('users').once('value').then(function(userSnapshot) {
+        const users = userSnapshot.val();
+        const userIDs = Object.keys(users);
+
+        for (let i = 0; i < userIDs.length; i++) {
+            if (users[userIDs[i]]['GROUPNAME'].toLowerCase() === username.toLowerCase()) {
+                displayUser(userIDs[i]);
+                return;
+            }
+        }
+        
+    });
+}
+
+firebase.auth().onAuthStateChanged(function(currentUser) {
+    if (currentUser) {
+        displayUser(currentUser.uid);
     } else {
       // No user is signed in.
       console.log('user not signed in')
@@ -79,29 +103,21 @@ firebase.database().ref('messages').on("child_added", function(dataRef){
 });
 
 
-function displayCurrentUser() {
-    const currentUser = firebase.auth().currentUser;
+function displayUser(uid) {
     const nameDisplay = document.getElementById("displayname");
 
-    firebase.database().ref('users/' +currentUser.uid + '/GROUPNAME').once("value").then(function(usernameSnapshot){
-        const currentUsername = usernameSnapshot.val();
-        nameDisplay.innerText ="Hi, "+ currentUsername + "!";
+    firebase.database().ref('users/' + uid).once("value").then(function(userSnapshot){
+        const user = userSnapshot.val();
 
-    });
-    firebase.database().ref('users/' +currentUser.uid + '/LOCATION').once("value").then(function(usernameSnapshot){
-        const currentUsername = usernameSnapshot.val();
-        locatioN.innerText ="Location:" + currentUsername;
+        const locatioN = document.getElementById("location");
+        const contact = document.getElementById("contact");
+        const smalldiscription = document.getElementById("smalldiscription");
+        const usernameElement = document.getElementById("username");
 
-    });
-    firebase.database().ref('users/' +currentUser.uid + '/CONTACT').once("value").then(function(usernameSnapshot){
-        const currentUsername = usernameSnapshot.val();
-        contact.innerText ="Contact:" + currentUsername;
-
-    });
-    firebase.database().ref('users/' +currentUser.uid + '/DeSCRIPTION').once("value").then(function(usernameSnapshot){
-        const currentUsername = usernameSnapshot.val();
-        smalldiscription.innerText ="Description:" + currentUsername;
-
+        nameDisplay.innerText ="Hi, "+ user['GROUPNAME'] + "!";
+        locatioN.innerText ="Location:" + user['LOCATION'];
+        contact.innerText ="Contact:" + user['CONTACT'];
+        smalldiscription.innerText ="Description:" + user['DeSCRIPTION'];
     });
 }
    
