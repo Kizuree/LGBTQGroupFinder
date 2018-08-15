@@ -10,6 +10,7 @@ const logOutButton = document.getElementById("logOutButton");
 logOutButton.addEventListener("click", logOut)
 const editProfileButton = document.getElementById("editProfileButton")
 editProfileButton.addEventListener("click", editProf )
+const elem = document.getElementById('allMessages');
 
 
 firebase.auth().onAuthStateChanged(function(user) {
@@ -69,6 +70,7 @@ function updateUI(data){
     const messageDiv = document.createElement('p');
     messageDiv.innerText = data.NAME + " : " + data.MESSAGE;
     allMessagesDiv.appendChild(messageDiv);
+    elem.scrollTop = elem.scrollHeight;
 }
 // Set database "child_added" event listener here
 firebase.database().ref('messages').on("child_added", function(dataRef){
@@ -119,3 +121,5 @@ function logOut(){
 
 
 }
+
+
