@@ -83,7 +83,7 @@ function displayCurrentUser() {
 
     firebase.database().ref('users/' +currentUser.uid + '/GROUPNAME').once("value").then(function(usernameSnapshot){
         const currentUsername = usernameSnapshot.val();
-        nameDisplay.innerText ="Hi, "+ currentUsername;
+        nameDisplay.innerText ="Hi, "+ currentUsername + "!";
 
     });
     firebase.database().ref('users/' +currentUser.uid + '/LOCATION').once("value").then(function(usernameSnapshot){
