@@ -231,20 +231,26 @@ h3{
 
 
 #pfp{
-    color: rgb(61, 2, 41);
+    color: rgb(138, 226, 216);
     display: inline;
     font-size: 65px;
     font-family: 'Orbitron', sans-serif;
 
 }
 #pfp1{
-    color: rgb(61, 2, 41);
+    color: rgb(138, 226, 216);
     display: inline;
     font-size: 65px;
     font-family: 'Orbitron', sans-serif;
 }
 #pfp2{
-    color: rgb(61, 2, 41);
+    color: rgb(138, 226, 216);
+    display: inline;
+    font-size: 65px;
+    font-family: 'Orbitron', sans-serif;
+}
+#pfp3{
+    color: rgb(138, 226, 216);
     display: inline;
     font-size: 65px;
     font-family: 'Orbitron', sans-serif;
@@ -273,10 +279,19 @@ h3{
    padding-left: 65px;
    padding-top: 30px;
 }
+.peeps3{
+    display: inline;
+    border: 7px solid black;
+   padding-left: 65px;
+   padding-top: 30px;
+}
 #datway1{
     border: 7px solid black;
 }
 #datway2{
+    border: 7px solid black;
+}
+#datway3{
     border: 7px solid black;
 }
 
