@@ -84,6 +84,22 @@ function displayCurrentUser() {
     firebase.database().ref('users/' +currentUser.uid + '/GROUPNAME').once("value").then(function(usernameSnapshot){
         const currentUsername = usernameSnapshot.val();
         nameDisplay.innerText = currentUsername;
+
+    });
+    firebase.database().ref('users/' +currentUser.uid + '/LOCATION').once("value").then(function(usernameSnapshot){
+        const currentUsername = usernameSnapshot.val();
+        locatioN.innerText = currentUsername;
+
+    });
+    firebase.database().ref('users/' +currentUser.uid + '/CONTACT').once("value").then(function(usernameSnapshot){
+        const currentUsername = usernameSnapshot.val();
+        contact.innerText = currentUsername;
+
+    });
+    firebase.database().ref('users/' +currentUser.uid + '/DeSCRIPTION').once("value").then(function(usernameSnapshot){
+        const currentUsername = usernameSnapshot.val();
+        smalldiscription.innerText = currentUsername;
+
     });
 }
    
