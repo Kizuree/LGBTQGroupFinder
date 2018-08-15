@@ -68,3 +68,10 @@
      font-size: 26px;
      font-weight: bold;
  }
+
+ #showPass{
+     text-align: center;
+ }
+ #showPassword{
+     text-align: center;
+ }
