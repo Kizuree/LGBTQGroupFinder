@@ -5,7 +5,7 @@ enterButton.addEventListener("click", signUp)
 function signUp(event){
     event.preventDefault();
     const  emailElement= document.getElementById("email");
-    const passwordElement = document.getElementById("password"); 
+    const passwordElement = document.getElementById("myInput"); 
     const email = emailElement.value;
     const password = passwordElement.value;
 
