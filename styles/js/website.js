@@ -31,6 +31,8 @@ function searchUser(evt) {
             if (users[userIDs[i]]['GROUPNAME'].toLowerCase() === username.toLowerCase()) {
                 displayUser(userIDs[i]);
                 return;
+            }else{
+               
             }
         }
         
