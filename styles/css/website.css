@@ -15,6 +15,21 @@ ul {
     overflow: hidden;
     background-color: #333;
 }
+@media only screen and (max-width: 360px) {
+    ul {
+        
+        padding-left: 20px;
+    font-size: 30px;
+    }
+    #displayname,#location,#contact,#smalldiscription{
+        font-size: 40px;
+    }
+    #fullMessageInput{
+        font-size: 8px;
+    }
+
+
+}
 
 li {
     float: left;
