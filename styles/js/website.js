@@ -10,6 +10,11 @@ const logOutButton = document.getElementById("logOutButton");
 logOutButton.addEventListener("click", logOut)
 const editProfileButton = document.getElementById("editProfileButton")
 editProfileButton.addEventListener("click", editProf )
+
+
+
+
+
 function editProf(){
     window.location.href ="file:///C:/Users/ASC%20Student/Documents/LGBTQGroupFinder/info.html"
 }

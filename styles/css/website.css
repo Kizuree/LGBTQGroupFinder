@@ -8,7 +8,30 @@
 /* COLOR PALETTE */
 
 /* https://coolors.co/36151e-839791-593f62-e3b23c-edebd7 */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
 
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+    background-color: #111;
+}
 :root {
     --primaryDark: #36151E;
     --primaryLight: #EDEBD7;
@@ -208,3 +231,4 @@ h3{
 #datway{
     border: 7px solid black;
 }
+
