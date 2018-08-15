@@ -49,6 +49,16 @@ li a {
 li a:hover {
     background-color: #111;
 }
+
+ul input[type=text] {
+    float: right;
+    padding: 6px;
+    border: none;
+    margin-top: 8px;
+    margin-right: 16px;
+    font-size: 17px;
+    color: white;
+}
 :root {
     --primaryDark: #36151E;
     --primaryLight: #EDEBD7;
