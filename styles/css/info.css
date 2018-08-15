@@ -14,6 +14,7 @@ body{
     color: gold;
  }
  button{
+     
     background-color: rgb(131, 255, 0);
     border: none;
     color: black;
@@ -22,6 +23,7 @@ body{
     display: inline-block;
     font-size: 48px;
  }
+ 
  #title{
     font-family: 'Indie Flower', cursive;
     font-size: 40px;

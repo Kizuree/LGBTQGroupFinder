@@ -2,9 +2,15 @@
 
 const submitbutton = document.getElementById("submitbutton");
 submitbutton.addEventListener("click",updateDB);
+const cancelButton = document.getElementById("cancelButton");
+cancelButton.addEventListener("click", cancelIt)
 // const database = firebase.database();
 //console.log("current user: " + DisplayName)
 //document.getElementById("displayname").innerText = currentUser
+function cancelIt(){
+    window.location.href = "file:///C:/Users/ASC%20Student/Documents/LGBTQGroupFinder/website.html"
+}
+
 function updateDB(event){
     event.preventDefault();
 
