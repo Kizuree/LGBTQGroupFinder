@@ -20,7 +20,26 @@ width: 300px;;
     
    
 }
+
 }
+@media only screen and (max-width: 640px) {
+
+    h1{
+        font-size: 40px;
+    }
+    #location{
+    width: 300px;;
+    }
+    #groupname{
+        width: 300px;
+    }
+    #contact{
+        width: 300px;
+    }
+    #description{
+        
+       
+    }
 
 
 
