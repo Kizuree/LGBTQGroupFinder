@@ -23,6 +23,7 @@ ul {
     }
     #displayname,#location,#contact,#smalldiscription{
         font-size: 40px;
+       
     }
     #fullMessageInput{
         font-size: 8px;
@@ -30,6 +31,13 @@ ul {
     
 
 
+}
+@media only screen and (max-width: 320px){
+    ul{ 
+        width: 110%;
+        font-size: 30px;
+
+    }
 }
 
 li {
