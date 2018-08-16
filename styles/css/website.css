@@ -49,6 +49,9 @@ ul{
 ul{
     width:110%
 }
+#fullMessageInput{
+    font-size: 8px;
+}
 }
 
 li {
