@@ -49,4 +49,12 @@ h1{
     #mainzTitle {
     font-size: 30px;
     }
+    button{
+        margin-left: 120px;
+    }
+
+#loginPage4{
+text-align: center;
+   padding-right: 10px;
+}
 }
