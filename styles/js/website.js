@@ -31,8 +31,6 @@ function searchUser(evt) {
             if (users[userIDs[i]]['GROUPNAME'].toLowerCase() === username.toLowerCase()) {
                 displayUser(userIDs[i]);
                 return;
-            }else{
-               
             }
         }
         
@@ -131,7 +129,7 @@ function displayUser(uid) {
 function logOut(){
     firebase.auth().signOut().then(function() {
       
-        window.location.href = "file:///C:/Users/ASC%20Student/Documents/LGBTQGroupFinder/login.html"
+        window.location.href = "https://kizuree.github.io/LGBTQGroupFinder/login.html"
         // Sign-out successful.
       }).catch(function(error) {
         // An error happened.

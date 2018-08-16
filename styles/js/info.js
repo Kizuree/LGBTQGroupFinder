@@ -8,7 +8,7 @@ cancelButton.addEventListener("click", cancelIt)
 //console.log("current user: " + DisplayName)
 //document.getElementById("displayname").innerText = currentUser
 function cancelIt(){
-    window.location.href = "file:///C:/Users/ASC%20Student/Documents/LGBTQGroupFinder/website.html"
+    window.location.href = "https://kizuree.github.io/LGBTQGroupFinder/website.html"
 }
 
 function updateDB(event){
@@ -38,7 +38,7 @@ function updateDB(event){
     }
 
     firebase.database().ref('users/' + firebase.auth().currentUser.uid).set(value).then(function() {
-        window.location.href = "file:///C:/Users/ASC%20Student/Documents/LGBTQGroupFinder/website.html"
+        window.location.href = "https://kizuree.github.io/LGBTQGroupFinder/website.html"
     }).catch(function(error) {
         console.log(error);
     });
