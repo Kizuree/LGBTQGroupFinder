@@ -1,3 +1,29 @@
+
+
+
+
+@media only screen and (max-width: 360px) {
+
+h1{
+    font-size: 40px;
+}
+#location{
+width: 300px;;
+}
+#groupname{
+    width: 300px;
+}
+#contact{
+    width: 300px;
+}
+#description{
+    
+   
+}
+}
+
+
+
 body{
     background: url(https://www.noupe.com/wp-content/uploads/2009/10/baroque-pattern.jpg)no-repeat center center fixed; 
     -webkit-background-size: cover;
