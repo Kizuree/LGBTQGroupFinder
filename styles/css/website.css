@@ -234,9 +234,10 @@ h3{
 
 #peepz{
     text-align: center;
-    font-size: 64px;
-    color: rgb(13, 58, 1);
+    font-size: 92px;
+    color: rgb(138, 226, 216);;
     font-family: 'Concert One', cursive;
+    text-decoration: underline;
 }
 
 
