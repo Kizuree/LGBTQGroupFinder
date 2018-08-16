@@ -14,7 +14,7 @@ function signUp(event){
 
     firebase.auth().createUserWithEmailAndPassword(email, password).then(function() {
       // redirect to info.js
-      window.location.href = "https://kizuree.github.io/LGBTQGroupFinder/info.html"
+      window.location.href = "info.html"
     }).catch(function(error) {
 
       // Handle Errors here.
