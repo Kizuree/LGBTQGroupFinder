@@ -44,13 +44,9 @@ ul{
     width:107%;
 }
 }
-@media only screen and (max-width: 640px){
 
-ul{
-    width:120%
-}
 
-}
+
 
 li {
     float: left;
