@@ -38,7 +38,7 @@ function updateDB(event){
     }
 
     firebase.database().ref('users/' + firebase.auth().currentUser.uid).set(value).then(function() {
-        window.location.href = "https://kizuree.github.io/LGBTQGroupFinder/website.html"
+        window.location.href = "website.html"
     }).catch(function(error) {
         console.log(error);
     });
