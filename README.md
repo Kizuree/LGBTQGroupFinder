@@ -29,8 +29,8 @@ user {
 * Firebase (Auth + DB + Cloud Messaging?)
 
 ### Division of Labor
-Aldenis: Working on "create account page, login page", "styling"
-James: "Login Page", "Live chat API", "styling"
+Aldenis: Working on "Create Account Page, login page", Website, User Authentication,user data, "styling"
+James: "Login Page", "Live chat API", "Create Account Page", Website, user data, "styling"
 
 GSA is a club that meets on wednesdays to discuss problems in the LGBTQ+ community. We are looking to hold and event at our school on thursday August 24th
 Email: jleidy167@gmail.com, Phone: 913445757
