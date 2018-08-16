@@ -51,7 +51,7 @@ firebase.auth().onAuthStateChanged(function(currentUser) {
 
 
 function editProf(){
-    window.location.href ="file:///C:/Users/ASC%20Student/Documents/LGBTQGroupFinder/info.html"
+    window.location.href ="info.html"
 }
 /**
 * Updates the database with the username and message.
@@ -129,7 +129,7 @@ function displayUser(uid) {
 function logOut(){
     firebase.auth().signOut().then(function() {
       
-        window.location.href = "https://kizuree.github.io/LGBTQGroupFinder/login.html"
+        window.location.href = "login.html"
         // Sign-out successful.
       }).catch(function(error) {
         // An error happened.
