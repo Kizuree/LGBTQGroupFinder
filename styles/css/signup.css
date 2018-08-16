@@ -13,7 +13,7 @@
  }
  
  body{
-    margin-top: 125px;
+    
     background: url(http://www.pptbackgrounds.org/uploads/floral-frame-with-brown-powerpoint-backgrounds.jpg
  )
  no-repeat center center fixed;
@@ -24,6 +24,16 @@
     justify-content: center;
  
  
+ }
+ #imgGang{
+  
+     display: flex;
+     justify-content: center;
+   
+ }
+ #imgGang img{
+width: 20%;
+height: 20%;
  }
  
  #buttonPush{
